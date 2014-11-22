@@ -1,0 +1,201 @@
+/*   
+Theme Name: Prime
+Theme URI: http://devolux.org/2009/04/prime/
+Description: WordPress Theme with two columns, horizontal page navigation, automatic image thumbnails, integrated jQuery font resizer, random posts-widget and valid xhtml/css. Please report bugs as comments at the theme's homepage.
+Author: Devolux
+Author URI: http://devolux.org/
+Version: 1.7
+Tags: two-columns, fixed-width, blue
+.
+Released under the <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>.
+.
+*/
+
+/*       ###############################
+         BASIC TAGS
+         ############################### */
+
+* {margin: 0; padding: 0;}
+body {background: #7d7d6d; font: 10px Verdana; color: #333; margin: 20px 0 0 0;}
+h1, h2, h3, h4, h5, h6 {margin: 10px 0 0 0;}
+p {margin: 0px 0px 20px 0px;}
+a {outline: none; text-decoration: none; color: #215c97;}
+a img {border: none;}
+
+/*       ###############################
+         BASIC LAYOUT
+         ############################### */
+
+div#page {width: 1000px; margin: 0 auto;}
+
+div#header {width: 1000px; height: 233px; background: url(img/header.png) no-repeat;}
+div#description {padding: 30px 0 0 50px;}
+div#nav {width: 950px; height: 35px; padding: 0 25px; background: url(img/nav.png) no-repeat top;}
+div#content {clear: both; background: url(img/content_bg.png) repeat-y; width: 880px; padding: 0 60px 0 60px;}
+
+div#sidebar {float: left; width: 240px; margin: 20px 0 0 0;}
+div#sidebar_random {margin: 30px 0 0 0;}
+div#sidebar_random img {max-width: 180px;}
+
+div#text {float: right; width: 615px; margin: 30px 0 0 0; padding: 0 0 0 20px; line-height: 2.0; border-left: 1px solid #eee;}
+
+div.post {margin: 0 0 20px 0; padding: 0 0 10px 0; border-bottom: 1px solid #eee;}
+div.post-single {margin: 0 0 20px 0;}
+
+div.post_left {float: left; width: 325px; padding: 0 20px 0 0;}
+div.date {float: left; width: 64px; height: 60px; padding: 4px 0 0 0; margin: 0 10px 0px 0; background: url(img/calendar.png) no-repeat;}
+
+div.post_right {float: right; width: 250px; padding: 0 0 0 20px;}
+div.post_right img {max-width: 250px;}
+
+div.single_content {clear: both; margin: 0 0 50px 0;}
+
+div.bookmarks {text-align: right; float: right;}
+
+div#tag_cloud {clear: both; text-align: center; border-bottom: 1px solid #eee; padding: 20px 0;}
+
+div#appendix {position: relative; background: url(img/content_bg.png) repeat-y; width: 880px; padding: 20px 60px 0 60px; text-align: center;}
+div#totop {position: absolute; top: 45px; left: 30px;}
+
+div#footer {width: 1000px; height: 55px; background: url(img/footer.png) no-repeat;}
+
+
+
+/*       ###############################
+         NAVIGATION
+         ############################### */
+
+div#nav ul {float: left; list-style: none;}
+
+div#nav li {float: left;}
+div#nav li a {display: block; margin: 0; padding: 10px 16px; color: #f5f5f5; text-decoration: none; border-right: 1px solid #2f2f2f; font: bold 11px Verdana, sans-serif;}
+div#nav li a:hover {background: #2f2f2f;}
+div#nav li.current_page_item a {background: #2f2f2f;}
+
+/*       ###############################
+         WIDGETS
+         ############################### */
+
+div#sidebar h4 {font: bold 130% Georgia, Verdana, sans-serif; margin: 15px 0 5px 0;}
+
+div#widget {margin: 0; padding: 0; font-size: 110%;}
+div#sidebar a {display: block; padding: 7px 0px; color: #8a8a8a; font: normal 120% Verdana, sans-serif;}
+
+div#sidebar ul {width: 220px; list-style: none; padding: 0 0 0 10px;}
+div#sidebar ul ul {width: 200px; list-style: none; padding: 0 0 0 5px;}
+
+div#sidebar li {border-bottom: 1px dotted #eee; padding: 0 0 0 5px;}
+div#sidebar li:hover {border-bottom: 1px dotted #ccc; background: #eee;}
+div#sidebar li a:hover {color: #215c97;}
+
+div#sidebar ul ul li {border: none; background: none;}
+div#sidebar ul ul li:hover {border: none; background: none;}
+
+div#recent-comments {width: 200px;}
+
+p#font-resize a {display: inline; font: 180% bold Verdana, sans-serif; padding: 0px 5px;}
+
+/*calendar*/
+table#wp-calendar {margin: 0 0 10px 0; border-collapse: collapse; text-align: center; font-size: 140%;}
+table#wp-calendar a {font: normal 140% Verdana; color: #215c97; border: 1px solid #215c97;}
+table#wp-calendar caption {padding: 0 0 5px 0;}
+table#wp-calendar th {font: bold 140% Verdana;}
+table#wp-calendar th, td {width: 30px; height: 30px;}
+
+/*       ###############################
+         TEXT
+         ############################### */
+
+div#text a {color: #215c97;}
+div#text a:hover {color: #dc143c; text-decoration: underline;}
+div#text {font-size: 120%;}
+
+div#description h1 a {color: #fff; font: bold 280% Georgia;}
+div#description p {color: #eee; padding: 3px 0; font: normal 180% Verdana;}
+
+div#text h1 {font: bold 200% Georgia, Verdana, sans-serif; margin: 0 0 10px 0;}
+div#text h1 a {color: #333;}
+div#text h1 a:hover {color: #dc143c; text-decoration: none;}
+div#text h2 {font: bold 160% Georgia, Verdana, sans-serif; color: #333; margin: 0 0 10px 0;}
+div#text h2.archive-title {margin: 0px 0px 30px 0px; font: bold 200% Verdana; color: #215c97;}
+div#text h3 {font: bold 120% Georgia, Verdana, sans-serif; color: #333; margin: 0 0 5px 0;}
+
+div#text ul, ol {margin: 0 0 20px 20px;}
+
+p#next-posts {text-align: left; font: normal 140% Verdana;}
+
+div.date {font: normal 11px Georgia; text-align: center; color: #fff;}
+p.date-month {margin: 2px 0 0 0; color: #666; font: normal 32px Georgia;}
+
+p.post_info {font-size: 90%; margin: 10px 0px 5px 0px;}
+
+img.post_icon_1 {position: relative; top: 4px; right: 1px; margin: 0 3px 0 0;}
+img.post_icon {position: relative; top: 4px; right: 1px; margin: 0 3px 0 12px;}
+
+div#tag_cloud a {color: #215c97;}
+div#tag_cloud a:hover {color: #dc143c; text-decoration: underline;}
+
+p.footer_info {margin: 5px 0 0 0; color: #666; font: normal 110% Verdana, san-serif;}
+
+div#totop a {color: #215c97; font: bold 140% Verdana; padding: 30px;}
+div#totop a:hover {color: #dc143c;}
+
+code {font: normal 120% Courier, serif;}
+
+/*      ##################################
+           COMMENTS
+        ################################## */
+
+div.comment {width: 575px; margin: 0 0 20px 0; padding: 20px; background: #f7f7f7; border: 1px solid #ccc;}
+div.comment p {margin: 0px;}
+div.comment-details {float: left; width: 100px; font-size: 10px;}
+div.comment-text {float: right; width: 455px;}
+
+h2#comment-header {margin: 40px 0 10px 0 !important;}
+h2#respond {margin: 10px 0 10px 0 !important;}
+h3#no-comments {font: bold 120% Verdana !important; color: #215c97 !important; margin: 0 !important;}
+
+/*        ##################################
+           FORMS
+        ################################## */
+
+label {display: block; margin: 0 0 5px 0;}
+.text {width: 350px; margin: 0 0 10px 0; padding: 5px; background: url(img/bg-form-text.gif) repeat-x left top; border: 1px solid #ccc;}
+textarea {width: 450px; height: 150px; margin: 0; padding: 5px; background: url(img/bg-form-text.gif) repeat-x left top; border: 1px solid #ccc;}
+.submit {width: auto; padding: 5px; margin: 5px 0; color: #fff; background: #666; border: 1px solid #333;}
+
+/*        ##################################
+           SEARCHFORM
+        ################################## */
+
+input#search {width: 150px; padding: 5px; background: url(img/bg-form-text.gif) repeat-x left top; border: 1px solid #ccc;}
+#search-submit {width: 30px; padding: 5px; color:#fff; background: #333; border: none;}
+
+/*        ##################################
+           WORDPRESS CSS
+        ################################## */
+
+img.alignright {float:right; margin: 0 0 30px 30px;}
+img.alignleft {float:left; margin: 0 50px 30px 0;}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+a img.alignright {float:right; margin: 0 0 30px 30px;}
+a img.alignleft {float:left; margin: 0 50px 30px 0;}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+
+.aligncenter, div.aligncenter {display: block; margin-left: auto; margin-right: auto;}
+.alignleft {float: left;}
+.alignright {float: right;}
+
+.wp-caption {border: 1px solid #ddd; text-align: center; background-color: #f3f3f3; padding-top: 4px; margin: 10px;}
+.wp-caption img {margin: 0;padding: 0;border: 0 none;}
+.wp-caption p.wp-caption-text {font-size: 110%; line-height: 17px; padding: 0 4px 5px; margin: 0;}
+
+/*       ###############################
+         CLEARFIX
+         ############################### */
+
+.clearfix:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+.clearfix {display: inline-block;}
+html[xmlns] .clearfix {display: block;}
+* html .clearfix {height: 1%;}
+.clear {clear: both;}
